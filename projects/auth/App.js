@@ -1,7 +1,8 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import firebase from 'firebase';
 import { Header } from './src/components/common';
+import LoginFrom from './src/components/login_form';
 
 export default class App extends React.Component {
   componentWillMount() {
@@ -18,9 +19,7 @@ export default class App extends React.Component {
     return (
       <View>
         <Header headerText="Authentication" />
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
+        <LoginFrom />
       </View>
     );
   }
