@@ -23,7 +23,7 @@ export const employeeCreate = ({ name, phone, shift }) => {
         dispatch({ type: EMPLOYEE_CREATE });
         Actions.employeeList({ type: 'reset' });
       });
-  }
+  };
 };
 
 export const employeesFetch = () => {
