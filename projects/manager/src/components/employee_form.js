@@ -54,4 +54,11 @@ const styles = {
   }
 };
 
-export default connect(null,{ employeeUpdate})(EmployeeForm);
+const mapStateToProps = (state) => {
+  const { name, phone, shift } = state.employeeForm;
+
+  return { name, phone, shift };
+};
+
+
+export default connect(mapStateToProps,{ employeeUpdate})(EmployeeForm);
