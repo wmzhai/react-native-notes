@@ -7,10 +7,10 @@ import EmployeeCreate from './components/employee_create';
 const RouterComponent = () => {
   return (
     <Router sceneStyle={{ paddingTop: 65 }}>
-      <Scene key="auth" initial>
+      <Scene key="auth" initial >
         <Scene key="login" component={LoginForm} title="Please Login" />
       </Scene>
-      <Scene key="main"  >
+      <Scene key="main" >
         <Scene
           onRight={() => Actions.employeeCreate()}
           rightTitle="Add"
@@ -18,7 +18,11 @@ const RouterComponent = () => {
           component={EmployeeList}
           title="Employees"          
         />
-        <Scene key="employeeCreate" component={EmployeeCreate} title="Create Employee" initial />
+        <Scene 
+          key="employeeCreate" 
+          component={EmployeeCreate} 
+          title="Create Employee"
+        />
       </Scene>
     </Router>
   );
